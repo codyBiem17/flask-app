@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Building the Flask app..."
+      - echo "No additional build steps required for Flask."
+  post_build:
+    commands:
+      - echo "Build completed!"
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
