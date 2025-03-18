@@ -15,14 +15,6 @@ def get_time():
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     return jsonify({"current_time": current_time})
 
-# Endpoint to reverse a string
-@app.route('/reverse', methods=['POST'])
-def reverse_string():
-    data = request.json
-    text = data.get('text', '')
-    reversed_text = text[::-1]
-    return jsonify({"original": text, "reversed": reversed_text})
-
 # Endpoint to get environment variables
 @app.route('/env', methods=['GET'])
 def get_env():
