@@ -13,14 +13,14 @@ phases:
   post_build:
     commands:
       - echo "Build completed!"
-      - echo "Listing files before creating deploy.zip"
-      - ls -l
-      - echo "Zipping deployment package..."
-      - zip -r deploy.zip *  # Zip the entire application
-      - echo "Listing files"
-      - ls -l
-      - echo "Uploading to S3..."
-      - aws s3 cp deploy.zip s3://cicd-codedeploy-cil/deploy.zip  # Replace with your S3 bucket name
+  #     - echo "Listing files before creating deploy.zip"
+  #     - ls -l
+  #     - echo "Zipping deployment package..."
+  #     - zip -r deploy.zip *  # Zip the entire application
+  #     - echo "Listing files"
+  #     - ls -l
+  #     - echo "Uploading to S3..."
+  #     - aws s3 cp deploy.zip s3://cicd-codedeploy-cil/deploy.zip  # Replace with your S3 bucket name
 
 artifacts:
   files:
