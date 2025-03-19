@@ -15,7 +15,7 @@ phases:
       - echo "Zipping deployment package..."
       - zip -r deploy.zip *  # Zip the entire application
       - echo "Uploading to S3..."
-      - aws s3 cp deploy.zip s3://my-app-bucket/deploy.zip  # Replace with your S3 bucket name
+      - aws s3 cp deploy.zip s3://cicd-codedeploy-cil/deploy.zip  # Replace with your S3 bucket name
 
 artifacts:
   files:
