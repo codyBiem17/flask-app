@@ -5,7 +5,7 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - pip install -r requirements.txt
-      - apt-get update && apt-get install -y zip
+      - sudo yum install -y zip
   build:
     commands:
       - echo "Building the Flask app..."
